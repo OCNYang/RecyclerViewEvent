@@ -147,7 +147,6 @@ public class DividerGridItemDecoration extends RecyclerView.ItemDecoration {
 
     @Override
     public void getItemOffsets(Rect outRect, View view, RecyclerView parent, State state) {
-//        Log.e("liao", state.toString());
         boolean b = state.willRunPredictiveAnimations();
         int itemPosition = ((RecyclerView.LayoutParams) view.getLayoutParams()).getViewLayoutPosition();
         int spanCount = getSpanCount(parent);
