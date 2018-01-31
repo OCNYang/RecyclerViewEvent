@@ -17,4 +17,4 @@
 * 拖曳排序时，限制首个 item 固定的实现
 
 详解介绍请看本项目对应的讲解文章：  
-**[RecyclerView 梳理：点击&长按事件、分割线、拖曳排序、滑动删除](http://www.jianshu.com/p/70788a7a5547)**
+**[RecyclerView 梳理：点击&长按事件、分割线、拖曳排序、滑动删除](https://juejin.im/post/5a320ffcf265da43200342a3)**
