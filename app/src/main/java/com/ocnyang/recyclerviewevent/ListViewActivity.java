@@ -1,12 +1,13 @@
 package com.ocnyang.recyclerviewevent;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.ocnyang.recyclerviewevent.recyembellish.DividerListItemDecoration;
 import com.ocnyang.recyclerviewevent.recyevent.OnRecyclerItemClickListener;

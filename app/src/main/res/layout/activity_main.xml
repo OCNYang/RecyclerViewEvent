@@ -10,7 +10,7 @@
     android:showDividers="middle"
     tools:context="com.ocnyang.recyclerviewevent.MainActivity">
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,13 +18,21 @@
         android:onClick="showListView"
         android:text="List View （拖曳 + 滑动删除）"/>
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/shape_bg_item"
         android:onClick="showGridView"
         android:text="Grid View（拖曳 + 固定首个）"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bg_item"
+        android:onClick="skipToEleganceMethod"
+        android:text="解决CheckBox、EditText复用错乱【优雅式】"/>
 
 
 </LinearLayout>

@@ -1,9 +1,12 @@
 package com.ocnyang.recyclerviewevent;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.ocnyang.recyclerviewevent.reuse_disorder.EleganceMethodActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,11 +16,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void showListView(View view){
-        startActivity(new Intent(this,ListViewActivity.class));
+    public void showListView(View view) {
+        startActivity(new Intent(this, ListViewActivity.class));
     }
 
     public void showGridView(View view) {
-        startActivity(new Intent(this,GridViewActivity.class));
+        startActivity(new Intent(this, GridViewActivity.class));
+    }
+
+    public void skipToEleganceMethod(View view) {
+        startActivity(new Intent(this, EleganceMethodActivity.class));
     }
 }
