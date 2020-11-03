@@ -50,6 +50,12 @@ class EleganceMethodAdapter(private val context: Context, var data: MutableList<
         //            holder.checkBox.isChecked = data[position].checked
         //        }
 
+        /**
+         * CheckBox 解决复用方法：
+         * 1. 将监听 CheckBox 状态变换的监听器设为 null。（主要目的是为了防止，设置 CheckBox 选中状态时回调监听）
+         * 2. 根据 条目数据 设置 CheckBox 的选中状态
+         * 3. 给 CheckBox 设置一个状态变化时的监听器，当状态变化时，将对应的 itemBean 的状态值对应改变
+         */
         holder.checkBox.setOnCheckedChangeListener(null)
         holder.checkBox.isChecked = data[position].checked
         val onCheckedChangeListener =
@@ -57,6 +63,17 @@ class EleganceMethodAdapter(private val context: Context, var data: MutableList<
         holder.checkBox.setOnCheckedChangeListener(onCheckedChangeListener)
 
 
+        /**
+         * EditText 解决复用方法讲解：
+         * 主要思路同上 CheckBox 的解决方法。
+         * 但 EditText 的文本变化监听器，不能通过 addTextChangedListener(null) 清空，
+         * 只能通过 removeTextChangedListener(TextWatcher watcher) 移除掉监听器，参数是你要移除的监听器
+         *
+         * 所以我们要解决的就是怎么保存监听器，当需要移除时需要获取它
+         * 最好的方法，就是和 EditText 一样将 TextWatcher 保存到 ViewHolder
+         * 这样同样能保证当 RecyclerView 通过复用机制在滚动中复用 item 时(其实就是复用的 ViewHolder)时, 复用的 EdiText 和 TextWatcher 是对应的
+         *
+         */
         holder.editText.removeTextChangedListener(holder.textWatcher)
         holder.editText.setText(data[position].inputStr)
         val textWatcher = object : TextWatcher {
