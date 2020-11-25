@@ -26,7 +26,7 @@
 虽然网上流传的有多种方法来解决，但都比较繁琐或存在一定缺陷。
 这里给大家提供一种比较优雅而合理的方式来解决复用错乱的问题：
 
-[![reuse disorder](http://img.shedoor.net/github/recyclervieweventreuse_disorder.gif)](http://img.shedoor.net/github/recyclervieweventreuse_disorder.gif)
+[![reuse disorder](https://github.com/OCNYang/RecyclerViewEvent/blob/master/docs/recyclervieweventreuse_disorder.gif?raw=true)](http://img.shedoor.net/github/recyclervieweventreuse_disorder.gif)
 [图片显示失败？点击查看](http://img.shedoor.net/github/recyclervieweventreuse_disorder.gif)
 
 方法详情和讲解请看[源码](https://github.com/OCNYang/RecyclerViewEvent/blob/master/app/src/main/java/com/ocnyang/recyclerviewevent/reuse_disorder/EleganceMethodActivity.kt)
