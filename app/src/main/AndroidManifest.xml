@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".reuse_disorder.EleganceMethodActivity"></activity>
+        <activity android:name=".diff_util.DiffUtilActivity"></activity>
+        <activity android:name=".reuse_disorder.EleganceMethodActivity" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">

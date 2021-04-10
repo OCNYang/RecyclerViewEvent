@@ -6,6 +6,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.ocnyang.recyclerviewevent.diff_util.DiffUtilActivity;
 import com.ocnyang.recyclerviewevent.reuse_disorder.EleganceMethodActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,5 +27,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void skipToEleganceMethod(View view) {
         startActivity(new Intent(this, EleganceMethodActivity.class));
+    }
+
+    public void skipToDiffUtil(View view) {
+        startActivity(new Intent(this, DiffUtilActivity.class));
     }
 }
