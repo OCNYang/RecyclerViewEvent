@@ -37,7 +37,7 @@
         <activity
             android:name=".notify_item.NotifyItemActivity"
             android:exported="true"
-            android:label="局部刷新"
+            android:label="定向刷新"
             android:screenOrientation="portrait" />
     </application>
 

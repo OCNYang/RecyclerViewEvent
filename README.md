@@ -31,7 +31,7 @@
 
 方法详情和讲解请看[源码](https://github.com/OCNYang/RecyclerViewEvent/blob/master/app/src/main/java/com/ocnyang/recyclerviewevent/reuse_disorder/EleganceMethodActivity.kt)
 
-## 3. 使用 `notifyItemChanged(int position, @Nullable Object payload)` 局部刷新
+## 3. 使用 `notifyItemChanged(int position, @Nullable Object payload)` 定向刷新
 
 具体查看源码说明：[NotifyItemAdapter.onBindViewHolder(holder: NotifyItemViewHolder, position: Int, payloads: MutableList<Any>)](https://github.com/OCNYang/RecyclerViewEvent/blob/master/app/src/main/java/com/ocnyang/recyclerviewevent/notify_item/NotifyItemActivity.kt)
 

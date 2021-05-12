@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="10dp"
-            android:text="全选（局部刷新）"
+            android:text="全选（定向刷新）"
             android:textAllCaps="false"
             android:textSize="12sp" />
     </LinearLayout>
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="10dp"
-            android:text="条目1、2图片（局部刷新）"
+            android:text="条目1、2图片（定向刷新）"
             android:textAllCaps="false"
             android:textSize="12sp" />
     </LinearLayout>
