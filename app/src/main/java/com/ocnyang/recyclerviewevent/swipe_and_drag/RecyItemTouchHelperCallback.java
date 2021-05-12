@@ -1,11 +1,12 @@
-package com.ocnyang.recyclerviewevent.recyevent;
+package com.ocnyang.recyclerviewevent.swipe_and_drag;
 
 import android.graphics.Color;
+
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.ItemTouchHelper;
 
-import com.ocnyang.recyclerviewevent.RecyAdapter;
+import com.ocnyang.recyclerviewevent.swipe_and_drag.RecyAdapter;
 
 import java.util.Collections;
 

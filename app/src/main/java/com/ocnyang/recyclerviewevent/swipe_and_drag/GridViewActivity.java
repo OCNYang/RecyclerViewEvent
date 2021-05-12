@@ -1,23 +1,23 @@
-package com.ocnyang.recyclerviewevent;
+package com.ocnyang.recyclerviewevent.swipe_and_drag;
 
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.ItemTouchHelper;
+
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.ItemTouchHelper;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import com.ocnyang.recyclerviewevent.recyembellish.DividerListItemDecoration;
-import com.ocnyang.recyclerviewevent.recyevent.OnRecyclerItemClickListener;
-import com.ocnyang.recyclerviewevent.recyevent.RecyItemTouchHelperCallback;
+import com.ocnyang.recyclerviewevent.DataManager;
+import com.ocnyang.recyclerviewevent.R;
+import com.ocnyang.recyclerviewevent.swipe_and_drag.recyembellish.DividerGridItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListViewActivity extends AppCompatActivity {
-
+public class GridViewActivity extends AppCompatActivity {
     RecyclerView mRecyclerView;
     List<String> mStringList;
     RecyAdapter mRecyAdapter;
@@ -35,14 +35,14 @@ public class ListViewActivity extends AppCompatActivity {
         if (mStringList == null) {
             mStringList = new ArrayList<>();
         }
-        mStringList.addAll(DataManager.getData(15 - mStringList.size()));
-        mRecyAdapter = new RecyAdapter(R.layout.item_listview, mStringList);
+        mStringList.addAll(DataManager.getData(20 - mStringList.size()));
+        mRecyAdapter = new RecyAdapter(R.layout.item_gridview, mStringList, true);
 
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mRecyclerView.addItemDecoration(new DividerListItemDecoration(this, LinearLayoutManager.VERTICAL));
+        mRecyclerView.setLayoutManager(new GridLayoutManager(this, 4));
+        mRecyclerView.addItemDecoration(new DividerGridItemDecoration(this));
         mRecyclerView.setHasFixedSize(true);
 
-        RecyItemTouchHelperCallback itemTouchHelperCallback = new RecyItemTouchHelperCallback(mRecyAdapter);
+        RecyItemTouchHelperCallback itemTouchHelperCallback = new RecyItemTouchHelperCallback(mRecyAdapter, false, true);
         final ItemTouchHelper itemTouchHelper = new ItemTouchHelper(itemTouchHelperCallback);
         itemTouchHelper.attachToRecyclerView(mRecyclerView);
 
@@ -51,12 +51,15 @@ public class ListViewActivity extends AppCompatActivity {
             public void onItemClick(RecyclerView.ViewHolder viewHolder) {
                 RecyAdapter.ViewHolder viewHolder1 = (RecyAdapter.ViewHolder) viewHolder;
                 String tvString = viewHolder1.mTextView.getText().toString();
-                Toast.makeText(ListViewActivity.this, "逗逗~" + tvString, Toast.LENGTH_SHORT).show();
+                Toast.makeText(GridViewActivity.this, "逗逗~" + tvString, Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onLongClick(RecyclerView.ViewHolder viewHolder) {
-                Toast.makeText(ListViewActivity.this, "" + "讨厌，不要老是摸人家啦...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(GridViewActivity.this, "" + "讨厌，不要老是摸人家啦...", Toast.LENGTH_SHORT).show();
+                if (viewHolder.getLayoutPosition() != 0) {
+                    itemTouchHelper.startDrag(viewHolder);
+                }
             }
         });
         mRecyclerView.setAdapter(mRecyAdapter);

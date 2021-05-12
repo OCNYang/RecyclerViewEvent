@@ -1,4 +1,4 @@
-package com.ocnyang.recyclerviewevent;
+package com.ocnyang.recyclerviewevent.swipe_and_drag;
 
 import android.graphics.Color;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.ocnyang.recyclerviewevent.R;
 
 import java.util.Arrays;
 import java.util.List;

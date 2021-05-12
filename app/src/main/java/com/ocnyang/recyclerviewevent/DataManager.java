@@ -19,7 +19,7 @@ public class DataManager {
     public static final List<String> getData(int number) {
         List<String> stringList = new ArrayList<>();
         for (int i = 0; i < number; i++) {
-            stringList.add(sStringList.get(i % sStringList.size())+" ?");
+            stringList.add(sStringList.get(i % sStringList.size()) + " ?");
         }
         return stringList;
     }

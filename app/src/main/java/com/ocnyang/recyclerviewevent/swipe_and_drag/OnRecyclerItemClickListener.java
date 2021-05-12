@@ -1,7 +1,8 @@
-package com.ocnyang.recyclerviewevent.recyevent;
+package com.ocnyang.recyclerviewevent.swipe_and_drag;
 
 import androidx.core.view.GestureDetectorCompat;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -14,7 +15,7 @@ import android.view.View;
  *******************************************************************/
 
 
-public abstract class OnRecyclerItemClickListener implements RecyclerView.OnItemTouchListener{
+public abstract class OnRecyclerItemClickListener implements RecyclerView.OnItemTouchListener {
     private GestureDetectorCompat mGestureDetectorCompat;
     private RecyclerView mRecyclerView;
 
@@ -41,9 +42,10 @@ public abstract class OnRecyclerItemClickListener implements RecyclerView.OnItem
     }
 
     public abstract void onItemClick(RecyclerView.ViewHolder viewHolder);
+
     public abstract void onLongClick(RecyclerView.ViewHolder viewHolder);
 
-    private class ItemTouchHelperGestureListener extends GestureDetector.SimpleOnGestureListener{
+    private class ItemTouchHelperGestureListener extends GestureDetector.SimpleOnGestureListener {
         @Override
         public boolean onSingleTapUp(MotionEvent e) {
             View childViewUnder = mRecyclerView.findChildViewUnder(e.getX(), e.getY());

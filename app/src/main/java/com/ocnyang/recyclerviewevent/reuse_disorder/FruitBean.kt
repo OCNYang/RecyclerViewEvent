@@ -8,7 +8,7 @@ package com.ocnyang.recyclerviewevent.reuse_disorder
  *******************************************************************/
 
 data class FruitBean(
-        var title: String = "",
-        var checked: Boolean = false,
-        var inputStr: String = ""
+    var title: String = "",
+    var checked: Boolean = false,
+    var inputStr: String = ""
 )

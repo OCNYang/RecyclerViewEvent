@@ -1,4 +1,4 @@
-package com.ocnyang.recyclerviewevent.recyembellish;
+package com.ocnyang.recyclerviewevent.swipe_and_drag.recyembellish;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -7,11 +7,13 @@ import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.RecyclerView.LayoutManager;
 import androidx.recyclerview.widget.RecyclerView.State;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
+
 import android.view.View;
 
 /*******************************************************************

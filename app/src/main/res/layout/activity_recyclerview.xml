@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipChildren="false"
-    tools:context="com.ocnyang.recyclerviewevent.GridViewActivity">
+    tools:context="com.ocnyang.recyclerviewevent.swipe_and_drag.GridViewActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recy"

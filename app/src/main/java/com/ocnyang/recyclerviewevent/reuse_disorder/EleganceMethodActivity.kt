@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
@@ -18,27 +19,36 @@ class EleganceMethodActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_elegance_method)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         findViewById<RecyclerView>(R.id.recyclerView).apply {
             this.layoutManager = LinearLayoutManager(this@EleganceMethodActivity)
             this.adapter = EleganceMethodAdapter(
-                    this@EleganceMethodActivity,
-                    DataManager.getData(20).map { FruitBean(title = it) }.toMutableList()
+                this@EleganceMethodActivity,
+                DataManager.getData(20).map { FruitBean(title = it) }.toMutableList()
             )
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == android.R.id.home) {
+            finish()
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
 
 class EleganceMethodAdapter(private val context: Context, var data: MutableList<FruitBean>) :
-        RecyclerView.Adapter<EleganceMethodViewHolder>() {
+    RecyclerView.Adapter<EleganceMethodViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EleganceMethodViewHolder {
         val itemView =
-                LayoutInflater.from(context).inflate(R.layout.activity_elegance_method_item, parent, false)
+            LayoutInflater.from(context)
+                .inflate(R.layout.activity_elegance_method_item, parent, false)
         return EleganceMethodViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: EleganceMethodViewHolder, position: Int) {
-        holder.ivImg.setImageResource(imgList[ position%imgList.size])
+        holder.ivImg.setImageResource(imgList[position % imgList.size])
         holder.tvTitle.text = data[position].title
 
         // 通过只给 CheckBox 设置点击事件 来解决复用错乱
@@ -59,7 +69,9 @@ class EleganceMethodAdapter(private val context: Context, var data: MutableList<
         holder.checkBox.setOnCheckedChangeListener(null)
         holder.checkBox.isChecked = data[position].checked
         val onCheckedChangeListener =
-                CompoundButton.OnCheckedChangeListener { _, isChecked -> data[position].checked = isChecked }
+            CompoundButton.OnCheckedChangeListener { _, isChecked ->
+                data[position].checked = isChecked
+            }
         holder.checkBox.setOnCheckedChangeListener(onCheckedChangeListener)
 
 
@@ -94,9 +106,11 @@ class EleganceMethodAdapter(private val context: Context, var data: MutableList<
     override fun getItemCount(): Int = data.size
 
     companion object {
-        val imgList = listOf(R.drawable.ic_fruit_icons_01, R.drawable.ic_fruit_icons_02,
-                R.drawable.ic_fruit_icons_03, R.drawable.ic_fruit_icons_04,
-                R.drawable.ic_fruit_icons_05, R.drawable.ic_fruit_icons_06)
+        val imgList = listOf(
+            R.drawable.ic_fruit_icons_01, R.drawable.ic_fruit_icons_02,
+            R.drawable.ic_fruit_icons_03, R.drawable.ic_fruit_icons_04,
+            R.drawable.ic_fruit_icons_05, R.drawable.ic_fruit_icons_06
+        )
     }
 }
 

@@ -1,4 +1,4 @@
-package com.ocnyang.recyclerviewevent.recyembellish;
+package com.ocnyang.recyclerviewevent.swipe_and_drag.recyembellish;
 
 /*******************************************************************
  *    * * * *   * * * *   *     *       Created by OCN.Yang
@@ -13,9 +13,11 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
+
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.View;
 
 /**

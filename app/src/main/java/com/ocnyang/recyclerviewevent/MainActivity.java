@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.ocnyang.recyclerviewevent.diff_util.DiffUtilActivity;
 import com.ocnyang.recyclerviewevent.reuse_disorder.EleganceMethodActivity;
+import com.ocnyang.recyclerviewevent.swipe_and_drag.GridViewActivity;
+import com.ocnyang.recyclerviewevent.swipe_and_drag.ListViewActivity;
 
 public class MainActivity extends AppCompatActivity {
 

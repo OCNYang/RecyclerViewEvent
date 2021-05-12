@@ -9,8 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".diff_util.DiffUtilActivity"></activity>
-        <activity android:name=".reuse_disorder.EleganceMethodActivity" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
@@ -21,12 +19,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ListViewActivity"
+            android:name=".swipe_and_drag.ListViewActivity"
             android:label="ListView"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".GridViewActivity"
+            android:name=".swipe_and_drag.GridViewActivity"
             android:label="GridView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".diff_util.DiffUtilActivity"
+            android:label="DiffUtil"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reuse_disorder.EleganceMethodActivity"
+            android:label="复用错乱"
             android:screenOrientation="portrait" />
     </application>
 

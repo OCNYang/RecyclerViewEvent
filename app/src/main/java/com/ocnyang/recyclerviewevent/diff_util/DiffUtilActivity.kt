@@ -1,13 +1,14 @@
 package com.ocnyang.recyclerviewevent.diff_util
 
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -18,10 +19,14 @@ class DiffUtilActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_diff_util)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         findViewById<RecyclerView>(R.id.recyclerView).apply {
             this.layoutManager = LinearLayoutManager(this@DiffUtilActivity)
-            mAdapter = DiffUtilAdapter(this@DiffUtilActivity, DiffUtilDataManager.getRandomData((6..9).random()))
+            mAdapter = DiffUtilAdapter(
+                this@DiffUtilActivity,
+                DiffUtilDataManager.getRandomData((6..9).random())
+            )
             this.adapter = mAdapter
         }
 
@@ -33,18 +38,30 @@ class DiffUtilActivity : AppCompatActivity() {
             /**
              * 通过 [AdapterDiffCallback] 比较新老数据的差别
              */
-            val diffResult = DiffUtil.calculateDiff(AdapterDiffCallback(oldData = mAdapter.data, newData = randomData))
+            val diffResult = DiffUtil.calculateDiff(
+                AdapterDiffCallback(
+                    oldData = mAdapter.data,
+                    newData = randomData
+                )
+            )
             // 将差别结果作用于列表的 Adapter 以刷新数据显示
             diffResult.dispatchUpdatesTo(mAdapter)
         }
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == android.R.id.home) {
+            finish()
+        }
+        return super.onOptionsItemSelected(item)
+    }
 }
 
 class DiffUtilAdapter(var context: Context, var data: MutableList<DiffUtilFruitBean>) :
-        RecyclerView.Adapter<DiffUtilViewHolder>() {
+    RecyclerView.Adapter<DiffUtilViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DiffUtilViewHolder {
         val itemView =
-                LayoutInflater.from(context).inflate(R.layout.activity_diff_util_item, parent, false)
+            LayoutInflater.from(context).inflate(R.layout.activity_diff_util_item, parent, false)
         return DiffUtilViewHolder(itemView)
     }
 
