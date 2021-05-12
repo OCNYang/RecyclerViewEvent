@@ -31,7 +31,11 @@
 
 方法详情和讲解请看[源码](https://github.com/OCNYang/RecyclerViewEvent/blob/master/app/src/main/java/com/ocnyang/recyclerviewevent/reuse_disorder/EleganceMethodActivity.kt)
 
-## 3. 使用 DiffUtil 实现局部刷新
+## 3. 使用 `notifyItemChanged(int position, @Nullable Object payload)` 局部刷新
+
+具体查看源码说明：[NotifyItemAdapter.onBindViewHolder(holder: NotifyItemViewHolder, position: Int, payloads: MutableList<Any>)](https://github.com/OCNYang/RecyclerViewEvent/blob/master/app/src/main/java/com/ocnyang/recyclerviewevent/notify_item/NotifyItemActivity.kt)
+
+## 4. 使用 DiffUtil 实现局部刷新
 
 具体查看源码说明：[Activity](https://github.com/OCNYang/RecyclerViewEvent/blob/master/app/src/main/java/com/ocnyang/recyclerviewevent/diff_util/DiffUtilActivity.kt)
 [AdapterDiffCallback](https://github.com/OCNYang/RecyclerViewEvent/blob/master/app/src/main/java/com/ocnyang/recyclerviewevent/diff_util/AdapterDiffCallback.kt)

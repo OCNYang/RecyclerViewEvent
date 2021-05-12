@@ -7,6 +7,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.ocnyang.recyclerviewevent.diff_util.DiffUtilActivity;
+import com.ocnyang.recyclerviewevent.notify_item.NotifyItemActivity;
 import com.ocnyang.recyclerviewevent.reuse_disorder.EleganceMethodActivity;
 import com.ocnyang.recyclerviewevent.swipe_and_drag.GridViewActivity;
 import com.ocnyang.recyclerviewevent.swipe_and_drag.ListViewActivity;
@@ -33,5 +34,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void skipToDiffUtil(View view) {
         startActivity(new Intent(this, DiffUtilActivity.class));
+    }
+
+    public void skipToNotifyItem(View view) {
+        startActivity(new Intent(this, NotifyItemActivity.class));
     }
 }
