@@ -13,9 +13,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ocnyang.recyclerviewevent.R
-import com.ocnyang.recyclerviewevent.diff_util.DiffUtilAdapter
-import com.ocnyang.recyclerviewevent.diff_util.DiffUtilDataManager
-import com.ocnyang.recyclerviewevent.diff_util.DiffUtilFruitBean
 
 class NotifyItemActivity : AppCompatActivity() {
     private lateinit var mAdapter: NotifyItemAdapter
