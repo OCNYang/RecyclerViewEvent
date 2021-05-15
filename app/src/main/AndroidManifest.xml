@@ -39,6 +39,11 @@
             android:exported="true"
             android:label="定向刷新"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".paging3.PagingActivity"
+            android:exported="true"
+            android:label="Paging 3"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

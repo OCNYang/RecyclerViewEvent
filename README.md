@@ -39,3 +39,7 @@
 
 具体查看源码说明：[Activity](https://github.com/OCNYang/RecyclerViewEvent/blob/master/app/src/main/java/com/ocnyang/recyclerviewevent/diff_util/DiffUtilActivity.kt)
 [AdapterDiffCallback](https://github.com/OCNYang/RecyclerViewEvent/blob/master/app/src/main/java/com/ocnyang/recyclerviewevent/diff_util/AdapterDiffCallback.kt)
+
+## 5. 使用 Paging 3 分页加载
+
+具体查看源码说明：[paging3 相关代码](https://github.com/OCNYang/RecyclerViewEvent/blob/master/app/src/main/java/com/ocnyang/recyclerviewevent/paging3)
