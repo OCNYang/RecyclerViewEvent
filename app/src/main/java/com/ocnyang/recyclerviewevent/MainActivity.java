@@ -6,6 +6,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.ocnyang.recyclerviewevent.concat_adapter.ConcatAdapterActivity;
 import com.ocnyang.recyclerviewevent.diff_util.DiffUtilActivity;
 import com.ocnyang.recyclerviewevent.notify_item.NotifyItemActivity;
 import com.ocnyang.recyclerviewevent.paging3.PagingActivity;
@@ -43,5 +44,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void skipToPaging3(View view) {
         startActivity(new Intent(this, PagingActivity.class));
+    }
+
+    public void skipToConcatAdapter(View view) {
+        startActivity(new Intent(this, ConcatAdapterActivity.class));
     }
 }

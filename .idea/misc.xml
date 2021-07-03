@@ -4,10 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_concat_item_footer.xml" value="0.3548717948717949" />
+        <entry key="app/src/main/res/layout/activity_concat_item_header.xml" value="0.3548717948717949" />
         <entry key="app/src/main/res/layout/activity_diff_util.xml" value="0.1752786220871327" />
         <entry key="app/src/main/res/layout/activity_diff_util_item.xml" value="0.34479166666666666" />
         <entry key="app/src/main/res/layout/activity_elegance_method.xml" value="0.23233695652173914" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.34479166666666666" />
+        <entry key="app/src/main/res/layout/activity_merge_adapter.xml" value="0.3548717948717949" />
         <entry key="app/src/main/res/layout/activity_notify_item.xml" value="0.3307291666666667" />
         <entry key="app/src/main/res/layout/activity_notify_item_item.xml" value="0.34479166666666666" />
         <entry key="app/src/main/res/layout/activity_paging.xml" value="0.32222222222222224" />

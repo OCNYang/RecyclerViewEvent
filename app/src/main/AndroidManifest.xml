@@ -44,6 +44,12 @@
             android:exported="true"
             android:label="Paging 3"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".concat_adapter.ConcatAdapterActivity"
+            android:exported="true"
+            android:label="ConcatAdapter"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

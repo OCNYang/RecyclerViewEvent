@@ -5,8 +5,8 @@ import androidx.paging.PagingState
 import java.lang.Exception
 
 class FruitPagingSource(
-    private val repository: FruitRepository,
-    private val queryFruitName: String
+        private val repository: FruitRepository,
+        private val queryFruitName: String
 ) : PagingSource<Int, PagingFruitBean>() {
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, PagingFruitBean> {
@@ -14,17 +14,17 @@ class FruitPagingSource(
             var nextPageNumber = params.key ?: 1
             val baseBean = repository.requestFruitList(queryFruitName, nextPageNumber)
 
-            if (baseBean.isSuccess){
+            if (baseBean.isSuccess) {
                 val currentPage = baseBean.data.currentPage
-                val prevPageNumber = if(currentPage>1) currentPage-1 else null
-                val nextPageNumber = if (currentPage<baseBean.data.totalPage) currentPage+1 else null
+                val prevPageNumber = if (currentPage > 1) currentPage - 1 else null
+                val nextPageNumber = if (currentPage < baseBean.data.totalPage) currentPage + 1 else null
 
                 LoadResult.Page<Int, PagingFruitBean>(
-                    data = baseBean.data.fruits,
-                    prevKey = prevPageNumber,
-                    nextKey = nextPageNumber
+                        data = baseBean.data.fruits,
+                        prevKey = prevPageNumber,
+                        nextKey = nextPageNumber
                 )
-            }else{
+            } else {
                 LoadResult.Error(Exception())
             }
         } catch (e: Exception) {

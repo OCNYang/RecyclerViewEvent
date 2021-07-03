@@ -57,7 +57,7 @@ class DiffUtilActivity : AppCompatActivity() {
     }
 }
 
-class DiffUtilAdapter(var context: Context, var data: MutableList<DiffUtilFruitBean>) :
+open class DiffUtilAdapter(var context: Context, var data: MutableList<DiffUtilFruitBean>) :
     RecyclerView.Adapter<DiffUtilViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DiffUtilViewHolder {
         val itemView =

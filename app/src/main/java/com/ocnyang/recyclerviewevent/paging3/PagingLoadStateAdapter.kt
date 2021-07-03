@@ -4,17 +4,18 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.paging.LoadState
 import androidx.paging.LoadStateAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.ocnyang.recyclerviewevent.R
 
-class PagingLoadStateAdapter(val context: Context) : LoadStateAdapter<LoadStateViewHolder>() {
+open class PagingLoadStateAdapter(val context: Context) : LoadStateAdapter<LoadStateViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, loadState: LoadState): LoadStateViewHolder {
         return LoadStateViewHolder(
-            LayoutInflater.from(context)
-                .inflate(R.layout.activity_paging_item_loadstate, parent, false)
+                LayoutInflater.from(context)
+                        .inflate(R.layout.activity_paging_item_loadstate, parent, false)
         )
     }
 
@@ -29,4 +30,5 @@ class PagingLoadStateAdapter(val context: Context) : LoadStateAdapter<LoadStateV
 
 class LoadStateViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     var tvLoadState: TextView = view.findViewById(R.id.tvLoadState)
+    var progressBar: ProgressBar = view.findViewById(R.id.progressBar)
 }

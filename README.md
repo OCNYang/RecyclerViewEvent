@@ -11,6 +11,7 @@
 - [x] Paging 3 的使用
 - [ ] DiffUtil & 定向刷新 结合使用
 - [ ] 条目长按的上下文菜单按钮
+- [x] ConcatAdapter (旧名：MergeAdapter)
 
 <br/><br/><br/>
 
@@ -57,3 +58,16 @@
 ## 5. 使用 Paging 3 分页加载
 
 具体查看源码说明：[paging3 相关代码](https://github.com/OCNYang/RecyclerViewEvent/blob/master/app/src/main/java/com/ocnyang/recyclerviewevent/paging3)
+
+## 6. ConcatAdapter 实现多个不同的 Adapter 合并成一个
+
+![concatadapter](https://github.com/OCNYang/RecyclerViewEvent/blob/master/docs/concatadapter.jpg?raw=true)
+
+使用方式：
+```java
+    recyclerView.adapter = ConcatAdapter(mHeaderAdapter, mAdapter, mFooterAdapter)
+```
+
+* 可以使不同的 Adapter (不同数据、不同布局) 合并成一个 Adapter 设置给 RecyclerView 显示；
+* 功能有点类似多 ItemViewType 的 Adapter，不同的是每个 Adapter 是从上到下按顺序显示的，不能混排
+* 您可能使用过 `ViewHolder.getAdapterPosition` 来获得 Adapter 中某个 ViewHolder 的位置。现在，因为我们合并了多个 Adapter，作为代替，您需要调用 `ViewHolder.getBindingAdapterPosition ()`。
