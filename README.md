@@ -61,7 +61,7 @@
 
 ## 6. ConcatAdapter 实现多个不同的 Adapter 合并成一个
 
-![concatadapter](https://github.com/OCNYang/RecyclerViewEvent/blob/master/docs/concatadapter.jpg?raw=true)
+<img src="https://github.com/OCNYang/RecyclerViewEvent/blob/master/docs/concatadapter.jpg?raw=true" alt="ConcatAdapter" width="300">
 
 使用方式：
 ```java
