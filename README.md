@@ -47,21 +47,24 @@
 方法详情和讲解请看[源码](https://github.com/OCNYang/RecyclerViewEvent/blob/master/app/src/main/java/com/ocnyang/recyclerviewevent/reuse_disorder/EleganceMethodActivity.kt)
 
 ## 3. 使用 `notifyItemChanged(int position, @Nullable Object payload)` 定向刷新
+<img src="https://github.com/OCNYang/RecyclerViewEvent/blob/master/docs/PointRefresh.gif?raw=true" alt="PointRefresh" width="300">
 
 具体查看源码说明：[NotifyItemAdapter.onBindViewHolder(holder: NotifyItemViewHolder, position: Int, payloads: MutableList<Any>)](https://github.com/OCNYang/RecyclerViewEvent/blob/master/app/src/main/java/com/ocnyang/recyclerviewevent/notify_item/NotifyItemActivity.kt)
 
 ## 4. 使用 DiffUtil 实现局部刷新
+<img src="https://github.com/OCNYang/RecyclerViewEvent/blob/master/docs/DiffUtil.gif?raw=true" alt="DiffUtil" width="300">
 
 具体查看源码说明：[Activity](https://github.com/OCNYang/RecyclerViewEvent/blob/master/app/src/main/java/com/ocnyang/recyclerviewevent/diff_util/DiffUtilActivity.kt)
 [AdapterDiffCallback](https://github.com/OCNYang/RecyclerViewEvent/blob/master/app/src/main/java/com/ocnyang/recyclerviewevent/diff_util/AdapterDiffCallback.kt)
 
 ## 5. 使用 Paging 3 分页加载
+<img src="https://github.com/OCNYang/RecyclerViewEvent/blob/master/docs/Paging3.gif?raw=true" alt="Paging3" width="300">
 
 具体查看源码说明：[paging3 相关代码](https://github.com/OCNYang/RecyclerViewEvent/blob/master/app/src/main/java/com/ocnyang/recyclerviewevent/paging3)
 
 ## 6. ConcatAdapter 实现多个不同的 Adapter 合并成一个
 
-<img src="https://github.com/OCNYang/RecyclerViewEvent/blob/master/docs/concatadapter.jpg?raw=true" alt="ConcatAdapter" width="300">
+<img src="https://github.com/OCNYang/RecyclerViewEvent/blob/master/docs/ConcatAdapter.gif?raw=true" alt="ConcatAdapter" width="300">
 
 使用方式：
 ```java
