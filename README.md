@@ -47,7 +47,10 @@
 方法详情和讲解请看[源码](https://github.com/OCNYang/RecyclerViewEvent/blob/master/app/src/main/java/com/ocnyang/recyclerviewevent/reuse_disorder/EleganceMethodActivity.kt)
 
 ## 3. 使用 `notifyItemChanged(int position, @Nullable Object payload)` 定向刷新
+
 <img src="https://github.com/OCNYang/RecyclerViewEvent/blob/master/docs/PointRefresh.gif?raw=true" alt="PointRefresh" width="300">
+
+> 仔细观察效果图，会发现：非定向刷新时条目会有闪动；定向刷新不会有闪动
 
 具体查看源码说明：[NotifyItemAdapter.onBindViewHolder(holder: NotifyItemViewHolder, position: Int, payloads: MutableList<Any>)](https://github.com/OCNYang/RecyclerViewEvent/blob/master/app/src/main/java/com/ocnyang/recyclerviewevent/notify_item/NotifyItemActivity.kt)
 
